@@ -1,17 +1,15 @@
 <template>
   <div id="app">
-    <nav>
-      <div class="nav-wrapper blue darken-1">
-        <a class="brand-logo center">Sites favoritos</a>
-      </div>
-    </nav>
-
     <div class="container">
       <form @submit.prevent="salvar" class="right-aligned">
-        <label>Nome</label>
-        <input type="text" placeholder="Nome" v-model="site.name" />
-        <label>Url</label>
-        <input type="text" placeholder="Url" v-model="site.site_url" />
+        <div>
+          <label>Nome</label>
+          <input type="text" placeholder="Nome" v-model="site.name" />
+        </div>
+        <div>
+          <label>Url</label>
+          <input type="text" placeholder="Url" v-model="site.site_url" />
+        </div>
         <label>Categoria</label>
         <input type="text" placeholder="Categoria" v-model="site.category" />
 
@@ -38,6 +36,7 @@
               <md-card-actions>
                 <md-button @click="getFeed(site)">Ir para o Feed</md-button>
               </md-card-actions>
+              <br />
             </md-card>
           </md-layout>
         </md-layout>
@@ -84,7 +83,16 @@ export default {
 
 <style scoped>
 .card {
-  width: 80%;
-  margin-bottom: 20px;
+  width: 90%;
+  margin-bottom: 30px;
+}
+input {
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+}
+
+form {
+  padding: 20px;
 }
 </style>

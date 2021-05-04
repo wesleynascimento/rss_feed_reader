@@ -1,6 +1,6 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
-import { loginUser, logoutUser } from '../services/api/auth';
+import Vue from "vue";
+import Vuex from "vuex";
+import { loginUser, logoutUser } from "../services/api/auth";
 
 Vue.use(Vuex);
 
@@ -23,19 +23,18 @@ export default new Vuex.Store({
     login({ commit }, { email, password }) {
       return loginUser(email, password)
         .then(() => {
-          commit({ type: 'loginSuccess', email });
+          commit({ type: "loginSuccess", email });
           return Promise.resolve();
-        }).catch((error) => {
-          commit({ type: 'logout' });
+        })
+        .catch((error) => {
+          commit({ type: "logout" });
           return Promise.reject(error);
         });
     },
     logout({ commit }) {
       logoutUser();
-      commit('logout');
+      commit("logout");
     },
   },
-  modules: {
-
-  },
+  modules: {},
 });

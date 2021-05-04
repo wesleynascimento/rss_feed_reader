@@ -6,11 +6,11 @@ export default {
   },
 
   salvar: (site) => {
-    http.post("feed",{
+    http.post("feed", {
       name: site.name,
       site_url: site.site_url,
       category: site.category,
     });
-    alert("salvo com sucesso!")
+    alert("salvo com sucesso!");
   },
 };

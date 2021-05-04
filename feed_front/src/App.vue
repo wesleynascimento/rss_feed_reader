@@ -43,7 +43,6 @@ export default {
 };
 </script>
 
-
 <style src="vue-material/dist/vue-material.css"></style>
 
 <style>

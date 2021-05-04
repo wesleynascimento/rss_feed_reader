@@ -1,16 +1,15 @@
 <template>
   <div class="login">
     <h1>{{ name }}</h1>
-    <LoginForm/>
+    <LoginForm />
   </div>
 </template>
 
 <script>
-
-import LoginForm from '../components/LoginForm.vue';
+import LoginForm from "../components/LoginForm.vue";
 
 export default {
-  name: 'LoginPage',
+  name: "LoginPage",
   props: {
     msg: String,
   },
@@ -19,7 +18,7 @@ export default {
   },
   data() {
     return {
-      name: 'Login Page',
+      name: "Login Page",
     };
   },
 };
